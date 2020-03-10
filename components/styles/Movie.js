@@ -43,6 +43,7 @@ const MovieDetials = styled.div`
     .cast{
         display:flex;
         flex-direction:row;
+        flex-wrap:wrap;
         img{
             border-radius:50%;
             width: 45px;
