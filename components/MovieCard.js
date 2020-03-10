@@ -23,12 +23,12 @@ export default function MovieCard({topTen}) {
                                         starSpacing=".2rem"
                                         starRatedColor="yellow"
                                       />
-                                     <span className="info_rate">{movie.vote_average/2}</span>
+                                     <span className="info_rate">{movie.vote_average/2}/5</span>
                                   </div>
                                      <p>{movie.overview.substring(0,100)}
                                       <Link href="/movie/[id]" as={`/movie/${movie.id}`} >
                                         <span>
-                                          <a>  showmore...</a>
+                                          <a> showmore...</a>
                                         </span>
                                       </Link>
                                      </p>

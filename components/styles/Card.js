@@ -39,6 +39,7 @@ const Card = styled.div`
         top: 0;
         width:2rem;
         height: 100%; right: 0;
+        width:30%;
         border-radius: 11px;
     }
 @media screen and (min-width: 768px) {

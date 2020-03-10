@@ -7,4 +7,5 @@ return(
             </Page>    
     ) 
   }
-export default MyApp
+
+export default MyApp;
