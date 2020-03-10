@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const MovieCards =styled.ul`
     list-style :none;
+    position:relative;
 `
 const Card = styled.div`
     position: relative;
@@ -42,7 +43,7 @@ const Card = styled.div`
         width:30%;
         border-radius: 11px;
     }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 868px) {
   .movie_header{
     width: 60%;
   }  
@@ -54,8 +55,12 @@ const Card = styled.div`
     background-position: -100% 10% !important;  
   }
 }
-
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width : 868px) {
+  .blur_back{
+    display:none;
+  }
+} */
+@media screen and (max-width: 868px) {
   .movie_card{
     width: 95%;
     margin: 70px auto; 

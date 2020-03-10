@@ -14,7 +14,6 @@ const theme = {
   };
   
 const StyledPage = styled.div`
-    background:black;
     color: ${props => props.theme.white};
   `;
   
@@ -32,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
         }
         body {
+        background:black;
         padding: 0;
         margin: 0;
         font-size: 1.5rem;
