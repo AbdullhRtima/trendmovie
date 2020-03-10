@@ -55,6 +55,23 @@ const Card = styled.div`
     background-position: -100% 10% !important;  
   }
 }
+@media screen and (max-width: 868px) {
+  max-width:45rem;
+  display:flex;
+  .movie_header{
+    width: 60%;
+  }  
+  .info_section{
+    background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    max-width:45rem;
+  }
+  .blur_back{
+    display:none;
+    max-width: 40rem;
+    /* margin-right:-100rem; */
+    /* background-position: -100% 10% !important;   */
+  }
+}
 /* @media screen and (max-width : 868px) {
   .blur_back{
     display:none;
