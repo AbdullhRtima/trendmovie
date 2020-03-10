@@ -107,6 +107,7 @@ const MovieHeader = styled.div`
       justify-content :space-between;
       font-size:2rem;
       margin-top:-1rem;
+      width:30rem;
       .info_rate{
         margin-top:.01rem;
         margin-left:-2rem;

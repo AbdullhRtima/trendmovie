@@ -35,7 +35,7 @@ export default function MovieCard({topTen}) {
                                </div>
                         </MovieHeader>
                     </div>
-                    <img className="blur_back" src={`https://image.tmdb.org/t/p/w185/${movie.backdrop_path}`} alt="movie-image"/>
+                    <img className="blur_back" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.backdrop_path}`} alt="movie-image"/>
               </Card>
               </li>
             </MovieCards>

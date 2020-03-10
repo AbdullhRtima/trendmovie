@@ -7,7 +7,7 @@ const movie = props.res;
     return (
         <div>
              <h1>movies</h1>
-             <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt="single_movie"/>
+             <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} alt="single_movie"/>
              <p style={{color:"red"}}>{movie.overview}</p>
         </div>
     )
