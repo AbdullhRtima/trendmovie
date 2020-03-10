@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import{MovieDetials ,Container} from './styles/Movie'
 import StarRatings from 'react-star-ratings'
 import YouTube from '@u-wave/react-youtube';
