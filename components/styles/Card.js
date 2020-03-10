@@ -20,16 +20,13 @@ const Card = styled.div`
         transform: scale(1.02);
         transition: all 0.4s;
     }
-    ul{
-        list-style-type: none;
+    .back_shadow{
+      box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+        &:hover{
+      box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+        }
     }
-.back_shadow{
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-    &:hover{
-  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-    }
-}
-.info_section{
+    .info_section{
         position: relative;
         width: 100%;
         height: 100%;
@@ -37,7 +34,7 @@ const Card = styled.div`
         z-index: 3;
         border-radius: 10px;
     }
-.blur_back{
+   .blur_back{
         position: absolute;
         top: 0;
         width:2rem;
@@ -51,7 +48,6 @@ const Card = styled.div`
   .info_section{
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
   }
-  
   .blur_back{
     width: 40rem;
     background-position: -100% 10% !important;  
@@ -84,7 +80,7 @@ const MovieHeader = styled.div`
       position: relative;
       display:flex;
       padding:2rem;
-  .locandina{
+  .movie-img{
         display:flex;
         flex-direction:column;
         position: relative;
@@ -106,6 +102,22 @@ const MovieHeader = styled.div`
           color:#01d277;
         }
       }
+    .info{
+      display:flex;
+      justify-content :space-between;
+      font-size:2rem;
+      margin-top:-1rem;
+      .info_rate{
+        margin-top:.01rem;
+        margin-left:-2rem;
+      }
+      .info_data{
+        margin-top:.01rem;
+      }
+      .info_star{
+        margin-top:.01rem;
+      }
+    }
 `
 
 export {
