@@ -14,7 +14,7 @@ const theme = {
   };
   
 const StyledPage = styled.div`
-    background: white;
+    background:black;
     color: ${props => props.theme.white};
   `;
   

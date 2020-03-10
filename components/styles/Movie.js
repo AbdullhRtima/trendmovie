@@ -7,7 +7,7 @@ const MovieDetials = styled.div`
     display:flex;
     justify-content:space-between;
     .movie_details{
-        color:black;
+        color:#ffff;
         display:flex;
         margin-top:-3rem;
         flex-direction:column;

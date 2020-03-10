@@ -11,7 +11,6 @@ function SingleMovie({movie ,vid}) {
         <MovieDetials>
             <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} alt="single_movie"/>
             <div className="movie_details">
-              <h2>{ console.log(vid)}</h2>
               <h1>{movie.original_title}</h1>
               <div className="info">
                     <span className="info_data" >{movie.release_date}</span>
@@ -42,7 +41,6 @@ function SingleMovie({movie ,vid}) {
              className="youtube"
               width="600"
               height="400"
-              autoplay
               video={`${trailer.key}`}
             />
         </Container>
