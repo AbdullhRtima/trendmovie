@@ -40,6 +40,16 @@ const MovieDetials = styled.div`
         color:#01d277;
         margin-right:1rem;
     }
+    .cast{
+        display:flex;
+        flex-direction:row;
+        img{
+            border-radius:50%;
+            width: 45px;
+            height: 45px;
+            margin-right:1rem; 
+        }
+    }
 @media screen and (max-width:800px) {
     margin-top:10rem;
     position:relative;
