@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const MovieCards =styled.ul`
     list-style :none;
     position:relative;
+  @media screen and (max-width: 476px) {
+    font-size:1.5rem;
+    margin-left:-5rem;
+}
 `
 const Card = styled.div`
     position: relative;
@@ -60,6 +64,7 @@ const Card = styled.div`
   display:flex;
   .movie_header{
     width: 60%;
+ 
   }  
   .info_section{
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
@@ -90,6 +95,9 @@ const Card = styled.div`
     background-position: 50% 50% !important;  
   }
   .movie_header{
+    h1{
+      font-size:.5rem;
+    }
     width: 100%;
     margin-top: 85px;
   }

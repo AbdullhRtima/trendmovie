@@ -13,7 +13,7 @@ export default function MovieCard({topTen}) {
                         <MovieHeader>
                           <img className="movie-img" src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt="movie-image"/>
                                <div>
-                               <h1>{movie.title}</h1>
+                                <h1>{movie.title}</h1>
                                   <div className="info">
                                   <span className="info_data" >{movie.release_date}</span>
                                     <StarRatings
