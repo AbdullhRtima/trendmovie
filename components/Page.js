@@ -1,8 +1,10 @@
 import styled , { ThemeProvider, createGlobalStyle } from 'styled-components';
+import axios from 'axios'
 import Meta from './Meta'
-
+import Navbar from './Navbar'
 const theme = {
     green: '#01d277',
+    white: '#ffff',
     black: '#393939',
     grey: '#3A3A3A',
     lightgrey: '#E1E1E1',
@@ -12,8 +14,8 @@ const theme = {
   };
   
 const StyledPage = styled.div`
-    background: black;
-    color: ${props => props.theme.green};
+    background: white;
+    color: ${props => props.theme.white};
   `;
   
 const Inner = styled.div`
@@ -34,7 +36,10 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-size: 1.5rem;
         line-height: 2;
-        font-family: 'radnika_next';
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+    a{
+      cursor: pointer;
     }
     `;
 function Page(props) {
@@ -44,11 +49,16 @@ function Page(props) {
              <StyledPage>
                 <Meta/>
                 <GlobalStyle/>
+                <Navbar/>
                 <Inner>{props.children}</Inner>
              </StyledPage>
          </ThemeProvider>
         </React.Fragment>
     )
+}
+Page.getInitialProps = async ctx => {
+  const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1')
+  return{res :res.data.results}
 }
 
 export default Page ;

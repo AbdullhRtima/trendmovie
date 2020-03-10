@@ -13,5 +13,5 @@ const Home = (props) => {
 Home.getInitialProps = async ctx => {
     const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1')
     return{res :res.data.results}
-  }
+}
 export default Home

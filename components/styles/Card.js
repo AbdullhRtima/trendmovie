@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const MovieCards =styled.ul`
     list-style :none;
 `
@@ -11,6 +12,10 @@ const Card = styled.div`
     overflow: hidden;
     border-radius: 10px;
     transition: all 0.4s;
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 1);
+    &:hover{
+      box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 1);
+  }
     &:hover{
         transform: scale(1.02);
         transition: all 0.4s;
@@ -18,8 +23,13 @@ const Card = styled.div`
     ul{
         list-style-type: none;
     }
+.back_shadow{
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+    &:hover{
+  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+    }
+}
 .info_section{
-
         position: relative;
         width: 100%;
         height: 100%;
@@ -34,27 +44,16 @@ const Card = styled.div`
         height: 100%; right: 0;
         border-radius: 11px;
     }
-.bright{
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-  &:hover{
-    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-  }
-}
 @media screen and (min-width: 768px) {
   .movie_header{
     width: 60%;
-  }
-  
-  .movie_desc{
-    width: 50%;
-  }
-  
+  }  
   .info_section{
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
   }
   
   .blur_back{
-    width: 80%;
+    width: 40rem;
     background-position: -100% 10% !important;  
   }
 }
@@ -71,36 +70,14 @@ const Card = styled.div`
     width: 100%;
     background-position: 50% 50% !important;  
   }
-  
   .movie_header{
     width: 100%;
     margin-top: 85px;
   }
-  
-  .movie_desc{
-    width: 100%;
-  }
-  
   .info_section{
     background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%);
     display: inline-grid;
   }
-}
-
-
-#bright{
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-  &:hover{
-    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-  }
-}
-
-.bright_back{
-  background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
-}
-
-.ave_back{
-    background: url("https://www.gannett-cdn.com/-mm-/c03fd140debe8ad4c05cf81a5cad7ad61a12ce52/c=0-1580-2985-3266&r=x803&c=1600x800/local/-/media/2017/06/09/USATODAY/USATODAY/636326272873599176-Black-Panther-Teaser.jpg");
 }
 `
 const MovieHeader = styled.div`
@@ -117,6 +94,17 @@ const MovieHeader = styled.div`
       }
       h1{
           margin-top:1px;
+          font-size:3rem;
+      }
+      span{
+        margin-top:-1rem;
+      }
+      p{
+        margin-top:2rem;
+        width:30rem;
+        span{
+          color:#01d277;
+        }
       }
 `
 
