@@ -64,7 +64,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
                             <span>
                                 <a>
                                     <button className="back-btn">
-                                    <img className="back-icon" src="/return.png" /> back
+                                    <img className="back-icon" src="/return.png" alt="back" /> back
                                     </button>
                                 </a>
                             </span>
@@ -76,7 +76,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
           {/* trailer sections start */}
             <div>
                 <h1 className="breaker"><span> 
-                     <img className="breaker-icon" src="/clapperboard.png" />
+                     <img className="breaker-icon" src="/clapperboard.png" alt="clapperboard"/>
                        </span>Watch Trailer<span> 
                </span> </h1>
             </div>
@@ -91,7 +91,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
             {/* similer movie start */}
              <div>
                 <h1 className="breaker"><span> 
-                     <img className="breaker-icon" src="/clapperboard.png" />
+                     <img className="breaker-icon" src="/clapperboard.png" alt="clapperboard" />
                        </span> Similar Movies<span> 
                 </span> </h1>
             </div>
@@ -106,7 +106,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
             {/* recommended movies start */}
             <div>
                 <h1 className="breaker"><span> 
-                     <img className="breaker-icon" src="/clapperboard.png" />
+                     <img className="breaker-icon" src="/clapperboard.png" alt="clapperboard"/>
                        </span>Recommended<span> 
                </span></h1>
                <div className="similerMovies">

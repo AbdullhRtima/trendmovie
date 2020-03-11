@@ -8,7 +8,7 @@ const Home = (props) => {
   const topTen = movies.slice(0,10)
   return( 
     <div>
-       <MovieCard topTen={topTen}/>
+       <MovieCard key={topTen.id} topTen={topTen}/>
     </div>
     )}
 // this is get the movies and put theme in the props of Home 

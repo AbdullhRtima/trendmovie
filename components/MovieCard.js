@@ -10,7 +10,7 @@ function MovieCard({topTen}) {
     return (
         <>
          {topTen.map((movie,i)=> (
-            <Link href="/movie/[id]" as={`/movie/${movie.id}`} >
+            <Link key={movie.id} href="/movie/[id]" as={`/movie/${movie.id}`} >
             <MovieCards key={movie.id}>
               <li>
               <Card>
@@ -41,7 +41,7 @@ function MovieCard({topTen}) {
                                         <span>
                                           <a>
                                               <button className="more-btn">
-                                                <img className="video-icon" src="/video.png" /> show more
+                                                <img className="video-icon" src="/video.png" alt="video icon" /> show more
                                               </button>
                                             </a>
                                         </span>
