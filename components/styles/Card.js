@@ -10,6 +10,7 @@ const MovieCards =styled.ul`
 `
 const Card = styled.div`
     position: relative;
+    cursor: pointer;
     display:flex;
     width: 800px;
     height: 350px;
@@ -149,6 +150,29 @@ const MovieHeader = styled.div`
       .info_star{
         margin-top:.01rem;
       }
+    }
+    .more-btn{
+      background-color:#01d277;
+      border-radius:.8rem;
+      font-size:1.7rem;
+      border: none;
+      width:15rem;
+      height:3rem;
+      z-index:.5;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 2px 5px 5px rgba(57, 140, 63, 0.6);
+      &:focus {
+        outline:0;
+        }
+      &:hover {
+        box-shadow: 2px 6px 6px rgba(57, 140, 63, 0.6);
+      }
+
+    }
+    .video-icon{
+      font-size:1.5rem;
+      width:2rem;
     }
 `
 

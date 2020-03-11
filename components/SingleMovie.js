@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import{MovieDetials ,Container} from './styles/Movie'
 import StarRatings from 'react-star-ratings'
 import YouTube from '@u-wave/react-youtube';
@@ -8,9 +9,9 @@ function SingleMovie({movie ,vid ,credit}) {
     return (
         <Container>
         <MovieDetials>
-            <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} alt="single_movie"/>
+            <img className="movie-poster" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} alt="single_movie"/>
             <div className="movie_details">
-                <span>{console.log(credit.cast)}</span>
+                <span>{console.log(movie)}</span>
               <h1>{movie.original_title}</h1>
               <div className="info">
                     <span className="info_data" >{movie.release_date}</span>
@@ -31,14 +32,24 @@ function SingleMovie({movie ,vid ,credit}) {
                            ))}
                         </div>
                 
-              <p>{movie.overview}</p>       
+              <p>{movie.overview}</p>   
+                
               <div className="cast">
                {cast.map((data,i)=> (
                         <img className="img" src={`https://image.tmdb.org/t/p/w300/${data.profile_path}`} alt="cast"/>
                ))}  
                 </div>        
+                <Link href="/">
+                        <span>
+                            <a>
+                                <button className="back-btn">
+                                <img className="back-icon" src="/return.png" /> show more
+                                </button>
+                            </a>
+                        </span>
+                     </Link>
             </div>
-        
+         
           </MovieDetials>
   
             <YouTube 

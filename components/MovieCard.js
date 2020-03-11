@@ -6,6 +6,7 @@ export default function MovieCard({topTen}) {
     return (
         <>
          {topTen.map((movie,i)=> (
+            <Link href="/movie/[id]" as={`/movie/${movie.id}`} >
             <MovieCards key={movie.id}>
               <li>
               <Card>
@@ -28,10 +29,19 @@ export default function MovieCard({topTen}) {
                                      <p>{movie.overview.substring(0,100)}
                                       <Link href="/movie/[id]" as={`/movie/${movie.id}`} >
                                         <span>
-                                          <a> showmore...</a>
+                                          <a> .....</a>
                                         </span>
                                       </Link>
                                      </p>
+                                     <Link href="/movie/[id]" as={`/movie/${movie.id}`} >
+                                        <span>
+                                          <a>
+                                              <button className="more-btn">
+                                                <img className="video-icon" src="/video.png" /> show more
+                                              </button>
+                                            </a>
+                                        </span>
+                                      </Link>
                                </div>
                         </MovieHeader>
                     </div>
@@ -39,6 +49,7 @@ export default function MovieCard({topTen}) {
               </Card>
               </li>
             </MovieCards>
+            </Link>
         ))}
         </>
     )

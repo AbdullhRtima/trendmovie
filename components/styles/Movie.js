@@ -7,6 +7,9 @@ const MovieDetials = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    .movie-poster{
+        border-radius:1.5rem;
+    }
     .movie_details{
         color:#ffff;
         display:flex;
@@ -50,6 +53,30 @@ const MovieDetials = styled.div`
             height: 45px;
             margin-right:1rem; 
         }
+    }
+    .back-btn{
+      background-color:#01d277;
+      border-radius:.8rem;
+      font-size:2rem;
+      border: none;
+      margin-top:4rem;
+      width:15rem;
+      height:3rem;
+      z-index:.5;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 2px 5px 5px rgba(57, 140, 63, 0.6);
+      &:focus {
+        outline:0;
+        }
+      &:hover {
+        box-shadow: 2px 6px 6px rgba(57, 140, 63, 0.6);
+      }
+    }
+    .back-icon{
+      font-size:1rem;
+      width:2rem;
+      height:1.8rem;
     }
 @media screen and (max-width:800px) {
     margin-top:10rem;
