@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+// oure custome meta header and other stuff for SEO ..... , 
 const Meta = () => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />

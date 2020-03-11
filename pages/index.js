@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import MovieCard from '../components/MovieCard'
+import {api} from '../Util/api'
 import axios from 'axios';
 
 const Home = (props) => {
@@ -10,8 +11,9 @@ const Home = (props) => {
        <MovieCard topTen={topTen}/>
     </div>
     )}
+// this is get the movies and put theme in the props of Home 
 Home.getInitialProps = async ctx => {
-    const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1')
+    const res = await axios.get(api())
                             .catch(err=> {console.log(err)});
     return{res :res.data.results}
 }

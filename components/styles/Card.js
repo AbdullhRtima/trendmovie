@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// card style go to the end to see what we are expored for you .....
+
 const MovieCards =styled.ul`
     list-style :none;
     position:relative;

@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+// document to solve css and other stuff issue 
 class MyDocument extends Document {
   // static async getInitialProps(ctx) {
   //   const initialProps = await Document.getInitialProps(ctx)

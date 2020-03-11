@@ -2,7 +2,11 @@ import Link from 'next/link'
 import {Card ,MovieHeader,MovieCards} from './styles/Card'
 import StarRatings from 'react-star-ratings'
 
-export default function MovieCard({topTen}) {
+// this component dispaly the top ten movies around the world base on the MDB api 
+// just simaple list of card with some css style live in card file 
+//  props = {topTen}
+
+function MovieCard({topTen}) {
     return (
         <>
          {topTen.map((movie,i)=> (
@@ -54,3 +58,4 @@ export default function MovieCard({topTen}) {
         </>
     )
 }
+export default MovieCard ;

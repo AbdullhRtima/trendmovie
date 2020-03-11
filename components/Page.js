@@ -2,6 +2,9 @@ import styled , { ThemeProvider, createGlobalStyle } from 'styled-components';
 import axios from 'axios'
 import Meta from './Meta'
 import Navbar from './Navbar'
+
+//  the magic component is here yes sir lol 
+//  cutome pagge thake childe and display all chunks here 
 const theme = {
     green: '#01d277',
     white: '#ffff',
@@ -56,9 +59,4 @@ function Page(props) {
         </React.Fragment>
     )
 }
-Page.getInitialProps = async ctx => {
-  const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1')
-  return{res :res.data.results}
-}
-
 export default Page ;

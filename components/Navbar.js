@@ -1,7 +1,7 @@
 import React from 'react'
 import {Nav} from './styles/Nav'
 import Link from 'next/link'
-
+// simple nav bar diplay at every page 
 function Navbar() {
     return (
         <Nav>

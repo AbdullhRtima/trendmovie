@@ -3,6 +3,7 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import Head from 'next/head'
 
+// this is a cutome app with loading bar for every route happen on the site using Nprogress
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`)
   NProgress.start()

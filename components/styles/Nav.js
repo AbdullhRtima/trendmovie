@@ -13,10 +13,12 @@ const Nav =styled.div`
     img{
         margin-top:1rem;
         height:8rem;
+        cursor: pointer;
     }
     h1{
         color:#01d277;
         text-transform:uppercase;
+        cursor: pointer;
     }
 `
 export {
