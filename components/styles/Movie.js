@@ -20,10 +20,13 @@ const MovieDetials = styled.div`
     .info{
         margin-top:-2rem;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
         justify-content:space-between;
         width:40rem;
         font-size:2rem;
+    }
+    .rate_data{
+        margin-right:7rem;
     }
     .info_rate{
         margin-left:1rem;

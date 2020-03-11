@@ -115,6 +115,7 @@ const MovieHeader = styled.div`
   .movie-img{
         display:flex;
         flex-direction:column;
+        border-radius:1rem;
         position: relative;
         margin-right: 20px;
         height: 120px;
@@ -122,10 +123,12 @@ const MovieHeader = styled.div`
       }
       h1{
           margin-top:1px;
-          font-size:3rem;
+          font-size:2rem;
       }
       span{
         margin-top:-1rem;
+        color:#01d277;
+        font-size:2rem;
       }
       p{
         margin-top:2rem;

@@ -18,7 +18,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
               <h1>{movie.original_title}</h1>
               <div className="info">
                     <span className="info_data" >{movie.release_date}</span>
-                    <div>
+                    <div className="rate_data">
                         <StarRatings
                                 className="info_star"
                                 rating={movie.vote_average/2}
@@ -27,7 +27,7 @@ function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
                                 starRatedColor="yellow"
                                 />
                             <span className="info_rate">{movie.vote_average/2}/5</span>
-                        </div>
+                    </div>
                     </div>
                         <div>
                          {movie.genres.map((genre ,i )=> (
