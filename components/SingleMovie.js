@@ -9,9 +9,10 @@ function SingleMovie({movie ,vid ,credit}) {
     return (
         <Container>
         <MovieDetials>
-            <img className="movie-poster" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} alt="single_movie"/>
+            <img className="movie-poster"
+             src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} 
+             alt="single_movie"/>
             <div className="movie_details">
-                <span>{console.log(movie)}</span>
               <h1>{movie.original_title}</h1>
               <div className="info">
                     <span className="info_data" >{movie.release_date}</span>
@@ -36,28 +37,44 @@ function SingleMovie({movie ,vid ,credit}) {
                 
               <div className="cast">
                {cast.map((data,i)=> (
-                        <img className="img" src={`https://image.tmdb.org/t/p/w300/${data.profile_path}`} alt="cast"/>
+                        <img key={data.id} className="img" src={`https://image.tmdb.org/t/p/w300/${data.profile_path}`} alt="cast"/>
                ))}  
                 </div>        
                 <Link href="/">
                         <span>
                             <a>
                                 <button className="back-btn">
-                                <img className="back-icon" src="/return.png" /> show more
+                                <img className="back-icon" src="/return.png" /> back
                                 </button>
                             </a>
                         </span>
-                     </Link>
+                </Link>
             </div>
-         
           </MovieDetials>
-  
+          <div>
+                <h1 className="breaker"><span> 
+                     <img className="breaker-icon" src="/clapperboard.png" />
+                       </span>Watch Trailer<span> 
+               </span> </h1>
+            </div>
             <YouTube 
              className="youtube"
               width="600"
               height="400"
               video={`${trailer.key}`}
             />
+             <div>
+                <h1 className="breaker"><span> 
+                     <img className="breaker-icon" src="/clapperboard.png" />
+                       </span> Similar Movies<span> 
+               </span> </h1>
+            </div>
+            <div>
+                <h1 className="breaker"><span> 
+                     <img className="breaker-icon" src="/clapperboard.png" />
+                       </span>Recommended<span> 
+               </span> </h1>
+            </div>
         </Container>
     )
 }

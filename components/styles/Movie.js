@@ -90,7 +90,19 @@ const MovieDetials = styled.div`
 const Container = styled.div`
     .youtube{
         margin-left:20rem;
-        margin-top:2rem;
+        margin-top:1rem;
+    }
+    .breaker{
+        display:flex;
+        text-transform:uppercase;
+        justify-content:center;
+        color:#01d277;   
+    }
+    .breaker-icon{
+        width:3rem;
+        margin-left:1rem;
+        margin-right:1rem;
+    
     }
  @media screen and (max-width:800px) {
     .youtube{
