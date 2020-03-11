@@ -1,6 +1,36 @@
-## This is simple application create with Nextjs BY abdullah abu rtima 
+## This is simple application create with Nextjs BY abdullah abu rtima
+## visit the site here 
+[Trend movies app ](https://trendmovie.abdullahrt97.now.sh)
 
- -----------------------------------------------------------------------------------------------------------------
+This website use , [The Movie Database](https://www.themoviedb.org/documentation/api)
+
+## Business Requirements
+
+- lists the current top 10 movies.
+- navigate to any of the top 10 movies for extra details.
+- SEO friendly by the magic of [Next.js](https://nextjs.org/)
+
+## tech
+- I use Axios to handle the API requsts 
+- styled components to make it pretty 
+- now to depolyment 
+
+## Files
+
+    ├── next                   # all next live here
+    ├── now                    # for deyplyomet
+    ├── components             # all our components
+        ├── style             # all style here
+    ├── pages                  # The router manager
+    ├── public                 # any static file live here
+    ├── Util                   # utiltis
+    ├── babelrc                # babelrc config
+    ├── package.json           # package manager
+    └── README.md              # and finally this is me lol 
+<!-- ![](name-of-giphy.gif) -->
+
+## next js Document 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

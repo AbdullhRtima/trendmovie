@@ -13,8 +13,7 @@ const Home = (props) => {
     )}
 // this is get the movies and put theme in the props of Home 
 Home.getInitialProps = async ctx => {
-    const res = await axios.get(api())
-                            .catch(err=> {console.log(err)});
+    const res = await axios.get(api()).catch(err=> {console.log(err)});
     return{res :res.data.results}
 }
 export default Home

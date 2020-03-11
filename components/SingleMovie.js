@@ -4,7 +4,6 @@ import YouTube from '@u-wave/react-youtube';
 // styles 
 import{MovieDetials ,Container} from './styles/Movie'
 
-
 // this component get exported and displayed at the movie [id] file the dynamic router 
 // this is 4 sections all styed in Container  by classNames
 
