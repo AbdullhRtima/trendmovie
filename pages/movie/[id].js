@@ -4,14 +4,19 @@ import SingleMovie from '../../components/SingleMovie'
 function Movie(props) {
     const movie = props.data;
     const vid = props.vid.results;
-    const credit= props.credits
+    const credit= props.credits;
+    const similar = props.similar.results;
+    const recommendations = props.recommendations.results;
+    // console.log(recommendations);
+    // console.log(similar);
         return (
             <>
                 <SingleMovie
-                key={movie.id}
-                movie={movie}
-                vid={vid}
-                credit={credit} />
+                    similar={similar}
+                    recommendations={recommendations}
+                    movie={movie}
+                    vid={vid}
+                    credit={credit}/>
             </>
         )
 }
@@ -26,13 +31,28 @@ Movie.getInitialProps = async ({query}) => {
         return  axios.get(`https://api.themoviedb.org/3/movie/${query.id}/credits?api_key=5033c761b29137a4b26a100f295b65c8`)
     }
 
-    // https://api.themoviedb.org/3/movie/475303/credits?api_key=5033c761b29137a4b26a100f295b65c8
-    const res = await axios.all([getData(),getVid(),getCredits()])
-        .then(axios.spread((data, vid,credits)=> {
-            return {resData : data.data , resVid : vid.data , resCredit:credits.data }
+    const getSimilar = ()=> {
+        return  axios.get(`https://api.themoviedb.org/3/movie/${query.id}/similar?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1`)
+    }
+    const getRecommended = ()=> {
+        return  axios.get(`https://api.themoviedb.org/3/movie/${query.id}/recommendations?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US&page=1`)
+    }
+    const res = await axios.all([getData(),getVid(),getCredits(),getSimilar(),getRecommended()])
+        .then(axios.spread((data, vid,credits,similer,recommendations)=> {
+            return {resData : data.data ,
+                  resVid : vid.data ,
+                  resCredit:credits.data ,
+                  resSimiler:similer.data ,
+                  resRec:recommendations.data
+                }
         })).catch(err =>{ console.log(err) })
-    // const res = await axios.get(`https://api.themoviedb.org/3/movie/${query.id}?api_key=5033c761b29137a4b26a100f295b65c8&language=en-US`)
-     return{data: res.resData , vid : res.resVid ,credits:res.resCredit}
+
+     return{data: res.resData ,
+            vid : res.resVid ,
+            credits:res.resCredit,
+            similar:res.resSimiler,
+            recommendations:res.resRec
+        }
 }
 
 export default Movie

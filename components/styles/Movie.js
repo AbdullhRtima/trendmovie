@@ -104,7 +104,27 @@ const Container = styled.div`
         margin-right:1rem;
     
     }
+    .similerMovies{
+        display:flex;
+        justify-content:center;
+        flex-direction:row;
+        
+    }
+    .similer-img{
+        width:20rem;
+        margin-right:1rem;
+    }
  @media screen and (max-width:800px) {
+    .similerMovies{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .similer-img{
+        width:20rem;
+        margin-top:1rem;
+        margin-left:8rem;
+    }
     .youtube{
         margin-left:20rem;
         margin-top:2rem;
@@ -112,6 +132,5 @@ const Container = styled.div`
         margin-left:-.8rem;
    }
 }
-
 `
 export {MovieDetials ,Container}

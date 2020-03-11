@@ -3,9 +3,11 @@ import{MovieDetials ,Container} from './styles/Movie'
 import StarRatings from 'react-star-ratings'
 import YouTube from '@u-wave/react-youtube';
 
-function SingleMovie({movie ,vid ,credit}) {
+function SingleMovie({movie ,vid ,credit ,similar,recommendations}) {
     const trailer = vid.slice(0,1)[0];
     const cast = credit.cast.slice(0,9);
+    const similarMovie = similar.slice(0,4);
+    const recommendMovie = recommendations.slice(0,4);
     return (
         <Container>
         <MovieDetials>
@@ -67,13 +69,23 @@ function SingleMovie({movie ,vid ,credit}) {
                 <h1 className="breaker"><span> 
                      <img className="breaker-icon" src="/clapperboard.png" />
                        </span> Similar Movies<span> 
-               </span> </h1>
+                </span> </h1>
+            </div>
+            <div className="similerMovies">
+                {similarMovie.map((data,i)=> (
+                     <img className="similer-img" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${data.poster_path}`} alt="reco img" />
+                ))}
             </div>
             <div>
                 <h1 className="breaker"><span> 
                      <img className="breaker-icon" src="/clapperboard.png" />
                        </span>Recommended<span> 
-               </span> </h1>
+               </span></h1>
+               <div className="similerMovies">
+                {recommendMovie.map((data,i)=> (
+                     <img className="similer-img" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${data.poster_path}`} alt="reco img" />
+                ))}
+              </div>
             </div>
         </Container>
     )
