@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@u-wave/react-youtube": "^0.7.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "next": "9.2.2",
     "next-nprogress": "^1.4.0",
     "react": "16.13.0",
